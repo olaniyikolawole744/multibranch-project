@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             when {
-                ${env.BRANCH_NAME}=='main'
+             expressionc{${env.BRANCH_NAME}=='main'}
             }
             steps {
                 echo 'Building only on main branch...'
