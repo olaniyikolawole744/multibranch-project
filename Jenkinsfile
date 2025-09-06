@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Deploy') {
             when {
-             expression{${2==2}
+             expression{2==2}
             }
             steps {
                 echo 'Deploying only on prod branch...'
