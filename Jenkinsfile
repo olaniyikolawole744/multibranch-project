@@ -15,7 +15,7 @@ pipeline {
              expression{2==2}
             }
             steps {
-                echo ${env.BRANCH_NAME}
+                echo  "${env.BRANCH_NAME}"
             }
         }
        stage('Monitor') {
