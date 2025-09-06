@@ -15,7 +15,7 @@ pipeline {
              expression{2==2}
             }
             steps {
-                echo 'Deploying only on prod branch...'
+                echo ${env.BRANCH_NAME}
             }
         }
        stage('Monitor') {
