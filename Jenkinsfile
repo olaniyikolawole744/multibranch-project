@@ -20,7 +20,7 @@ pipeline {
         }
        stage('Monitor') {
            when {
-               expression{3==3}
+               expression{env.BRANCH_NAME=='main'}
            }
            steps {
                echo 'Deploying on on dev branch...'
