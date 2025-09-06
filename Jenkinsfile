@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Deploy') {
             when {
-                ${env.BRANCH_NAME}=='prod'
+             expression{${env.BRANCH_NAME}=='prod'}
             }
             steps {
                 echo 'Deploying only on prod branch...'
@@ -20,7 +20,7 @@ pipeline {
         }
        stage('Monitor') {
            when {
-               ${env.BRANCH_NAME}=='dev'
+               expression{${env.BRANCH_NAME}=='dev'}
            }
            steps {
                echo 'Deploying on on dev branch...'
