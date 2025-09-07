@@ -16,6 +16,8 @@ pipeline {
             }
             steps {
                 echo  "THIS IS DEV BRANCH"
+                echo "THIS IS ENV DOT GIT BRANCH: ${env.GIT_BRANCH}"
+                echo "repo url: ${env.GIT_URL}"
             }
         }
        stage('Monitor') {
