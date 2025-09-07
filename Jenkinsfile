@@ -17,15 +17,15 @@ pipeline {
             steps {
                 echo  "THIS IS DEV BRANCH"
                 echo "THIS IS ENV DOT GIT BRANCH: ${env.GIT_BRANCH}"
-                echo "repo url: ${env.GIT_URL}"
+                echo "THIS IS BRANCH NAME ${env.GIT_URL}"
             }
         }
        stage('Monitor') {
            when {
-               expression{env.BRANCH_NAME=='main'}
+               expression{6==6}
            }
            steps {
-               echo 'Deploying on on dev branch...'
+               echo "THIS IS BRANCH NAME: ${BRANCH_NAME}"
            }
          }
     }
