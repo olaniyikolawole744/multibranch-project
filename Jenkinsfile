@@ -18,7 +18,7 @@ pipeline {
                 echo  "THIS IS DEV BRANCH"
                 echo "THIS IS ENV DOT GIT BRANCH: ${env.GIT_BRANCH}"
                 echo "THIS IS BRANCH URL ${env.GIT_URL}"
-                echo "THIS IS PRINT ENV ${printenv}"
+                sh 'printenv'
             }
         }
        stage('Monitor') {
